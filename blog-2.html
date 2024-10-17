@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Donate Bangladesh</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-8">
+  <h1 class="w-1/2 mb-4 text-3xl font-bold bg-green-500">Blog</h1>
+  
+  <h2 class="text-2xl font-semibold">1. What is the Document Object Model (DOM)?</h2>
+  <p>TThe Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a webpage as a tree-like model, where each node corresponds to parts of the document (like elements, attributes, and text). The DOM allows programming languages (mainly JavaScript) to interact with, access, and manipulate the structure, content, and style of a webpage dynamically. 
+  </p>
+  <h2 class="mt-4 text-2xl font-semibold">2. How do you select an element from the DOM?</h2>
+  <p>You can use various methods in JavaScript to select elements from the DOM: 
+    <code> document.getElementById("id"): Selects a single element by its id. </code>  or <code>document.querySelector("selector"): Selects the first element that matches the CSS selector.</code></p>
+  <h2 class="mt-4 text-2xl font-semibold">3.What is event delegation in the context of the DOM, and why is it useful?</h2>
+  <p>Event delegation is a technique where you attach a single event listener to a parent element to handle events on its child elements, even if they are added dynamically. Instead of adding separate event listeners to each child element, you delegate the event to the parent and detect which child element triggered the event using properties like <code>event.target.</code> <br>
+    <h4 class="text-xl font-semibold">Why is it useful?</h4>
+    Efficiency: It reduces the number of event listeners, improving performance, especially when dealing with a large number of elements.
+    Dynamic Elements: It allows you to handle events for elements that are added to the DOM later, even if they didn’t exist when the event listener was attached.</p>
+  <h2 class="mt-4 text-2xl font-semibold">4. How do you manipulate an element's attributes and styles using the DOM?</h2>
+  <p>You can manipulate an element's attributes using methods like <code>setAttribute()</code> or modify styles using the <code>style</code> property</p>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <script src="js/script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.0.0/dist/full.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 shadow-md bg-sky-50">
+        <div class="container flex items-center justify-between p-4 mx-auto">
+            <button class="px-5 py-1 font-medium text-black rounded bg-lime-400 hover:text-white-800" onclick="window.location.href='blog-2.html'">Blog</button>
+            <div class="flex text-center">
+                <img src="images/logo.png" alt="donate logo" class="pr-5">
+                <span class="text-2xl font-bold">  Donate Bangladesh</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <img src="images/coin.png" alt="coin">
+                <span id="account-balance" class="text-xl font-bold">10000 BDT</span>
+            </div>
+        </div>
+        <div class="flex justify-center p-2 space-x-4">
+            <button id="donation-btn" class="btn btn-active btn-green">Donation</button>
+            <button id="history-btn" class="btn btn-gray">History</button>
+        </div>
+    </nav>
+  <!--Main task  -->
+    <div class="container p-4 mx-auto lg:pl-20">
+        <!-- Donation Section -->
+        <div id="donation-section" class="md:pl-10">
+            <div class="md:grid-cols-1">
+                <div class="flex flex-col max-w-5xl overflow-hidden bg-white rounded-lg shadow-lg md:flex-row">
+                <!-- Card 1 -->
+                <div class="bg-white shadow-md md:w-1/2">
+                    <img src="images/noakhali.png" alt="Noakhali Flood Relief" class="float-left w-full mr-4 h-6/12">
+                </div>
+                 <div class="flex flex-col justify-between p-6 md:w-1/2"> 
+                    
+                    <p class="flex w-1/2 mt-2 font-bold bg-gray-200"><img src="images/coin.png" alt="coin"> Current Donation : <span id="donation1"> 0 BDT </span> </p>
+                    <h2 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
+                    <p class="text-justify">The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies to those affected by this disaster. Every contribution, big or small, makes a difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                    <input type="number" id="donation-amount-1" placeholder="Write Donation Amount" class="w-full mt-2 input input-bordered">
+                    <button onclick="donate(1, 'Noakhali Flood Relief')" class="w-full mt-2 btn btn-green bg-lime-400">Donate Now</button>
+                </div>
+            </div><br>
+                <!-- Card 2 -->
+                <div class="flex flex-col max-w-5xl overflow-hidden bg-white rounded-lg shadow-lg md:flex-row">
+                    <div class="bg-white shadow-md md:w-1/2">
+                        <img src="images/feni.png" alt="Flood condition of Feni" class="float-left w-full mr-4 h-6/12">
+                    </div>
+                     <div class="flex flex-col justify-between p-6 md:w-1/2"> 
+                        <p class="flex w-1/2 mt-2 font-bold bg-gray-200"><img src="images/coin.png" alt="coin"> Current Donation : <span id="donation2"> 0 BDT </span> </p>
+                        <h2 class="text-xl font-bold">Donate for Flood Relief in Feni, Bangladesh </h2>
+                        <p class="text-justify">TThe recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
+                        </p>
+                        <input type="number" id="donation-amount-2" placeholder="Write Donation Amount" class="w-full mt-2 input input-bordered">
+                        <button onclick="donate(2, 'Feni-Floods-Relief')" class="w-full mt-2 btn btn-green bg-lime-400">Donate Now</button>
+                    </div>
+                </div> <br>
+                <!-- Card--3 -->
+                <div class="flex flex-col max-w-5xl overflow-hidden bg-white rounded-lg shadow-lg md:flex-row">
+                    <div class="bg-white shadow-md md:w-1/2">
+                        <img src="images/quota-protest.png" alt="Quota-Protestor" class="float-left w-full mr-4 h-6/12">
+                    </div>
+                     <div class="flex flex-col justify-between p-6 md:w-1/2"> 
+                        <p class="flex w-1/2 mt-2 font-bold bg-gray-200"><img src="images/coin.png" alt="coin"> Current Donation : <span id="donation3"> 0 BDT </span> </p>
+                        <h2 class="text-xl font-bold">Aid for Injured in the Quota Movement in Bangladesh</h2>
+                        <p class="text-justify">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
+                        </p>
+                        <input type="number" id="donation-amount-3" placeholder="Write Donation Amount" class="w-full mt-2 input input-bordered">
+                        <button onclick="donate(3, 'Quota-Protestor-Aid')" class="w-full mt-2 btn btn-green bg-lime-400">Donate Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- History Section -->
+        <div id="history-section" class="hidden">
+            <h2 class="mb-4 text-2xl font-bold">Donation History</h2>
+            <div class=>
+             <ul id="history-list" class="pl-5 list-disc">   
+            </ul>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
